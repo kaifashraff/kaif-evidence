@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaif Ashraf | Digital Marketing Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0b1220;
+            --gold: #c9a96e;
+            --cream: #faf8f5;
+            --wine: #722f37;
+            --light-navy: #1a2238;
+            --dark-gold: #b08c3e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--cream);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--navy);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(11, 18, 32, 0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        
+        .logo span {
+            color: var(--cream);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--gold);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--gold);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--light-navy) 100%);
+            color: var(--cream);
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -10%;
+            width: 60%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(201, 169, 110, 0.08) 0%, transparent 70%);
+        }
+        
+        .page-hero h1 {
+            font-family: 'Crimson Text', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-hero h1 span {
+            color: var(--gold);
+        }
+        
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Services List */
+        .services-section {
+            padding: 6rem 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--navy);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--gold);
+        }
+        
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .service-block {
+            background: var(--cream);
+            border-radius: 8px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 20px rgba(11, 18, 32, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .service-block:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(11, 18, 32, 0.12);
+        }
+        
+        .service-block h3 {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: var(--navy);
+        }
+        
+        .service-block p {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        
+        .service-block ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-block ul li {
+            padding: 0.4rem 0;
+            color: #666;
+            font-size: 0.95rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .service-block ul li::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.8rem;
+        }
+        
+        /* Engagement Models */
+        .engagement {
+            background-color: var(--navy);
+            color: var(--cream);
+            padding: 6rem 0;
+        }
+        
+        .engagement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .engagement-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 169, 110, 0.2);
+            border-radius: 8px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .engagement-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+        }
+        
+        .engagement-card h3 {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.6rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        
+        .engagement-card p {
+            opacity: 0.85;
+            margin-bottom: 1.5rem;
+        }
+        
+        .engagement-card .price {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.8rem;
+            color: var(--cream);
+        }
+        
+        .engagement-card .price span {
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            opacity: 0.7;
+        }
+        
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--wine) 0%, #5c252c 100%);
+            color: var(--cream);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .cta-banner h2 {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--navy);
+            padding: 1rem 2.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--gold);
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(201, 169, 110, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--navy);
+            color: var(--cream);
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-family: 'Crimson Text', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .footer-links a {
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .services-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .engagement-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-hero {
+                padding: 4rem 0;
+            }
+            
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="ai-marketer.html" class="logo">Kaif<span>Ashraf</span></a>
+            <nav>
+                <ul>
+                    <li><a href="ai-marketer.html">AI Marketer</a></li>
+                    <li><a href="filmmaker.html">Filmmaker</a></li>
+                    <li><a href="agency-services.html">Agency</a></li>
+                    <li><a href="laqab-services.html">LAQAB</a></li>
+                    <li><a href="portfolio-showcase.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Digital Marketing <span>Services</span></h1>
+            <p>End-to-end performance marketing, creative production, and growth strategy—one partner for every channel that drives revenue.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">What I Deliver</h2>
+            <div class="services-list">
+                <div class="service-block">
+                    <h3>Paid Media Management</h3>
+                    <p>Full-funnel Meta, Google, and LinkedIn campaigns engineered for profitability—from account architecture to creative iteration.</p>
+                    <ul>
+                        <li>Meta & Instagram Ads</li>
+                        <li>Google Search & Shopping</li>
+                        <li>LinkedIn B2B Campaigns</li>
+                        <li>Retargeting & Funnel Sequencing</li>
+                    </ul>
+                </div>
+                <div class="service-block">
+                    <h3>AI & Marketing Automation</h3>
+                    <p>Predictive audience models, automated creative testing, and AI-assisted reporting that cut busywork and lift performance.</p>
+                    <ul>
+                        <li>AI Audience Modeling</li>
+                        <li>Automated A/B Creative Testing</li>
+                        <li>Chatbot & Lead Qualification</li>
+                        <li>Real-time Performance Dashboards</li>
+                    </ul>
+                </div>
+                <div class="service-block">
+                    <h3>Creative & Video Production</h3>
+                    <p>Scroll-stopping ad creatives, brand films, and UGC-style content produced in-house by a filmmaker who understands performance.</p>
+                    <ul>
+                        <li>Ad Creative & Hook Development</li>
+                        <li>Brand Films & Documentaries</li>
+                        <li>UGC & Influencer Content</li>
+                        <li>Motion Graphics & Editing</li>
+                    </ul>
+                </div>
+                <div class="service-block">
+                    <h3>Conversion & CRO</h3>
+                    <p>Landing page strategy, funnel audits, and A/B testing that turn paid traffic into paying customers.</p>
+                    <ul>
+                        <li>Landing Page Design & Copy</li>
+                        <li>Funnel Architecture</li>
+                        <li>Heatmap & Session Analysis</li>
+                        <li>Continuous A/B Testing</li>
+                    </ul>
+                </div>
+                <div class="service-block">
+                    <h3>SEO & Content Strategy</h3>
+                    <p>Technical SEO, content calendars, and authority building that compound organic growth alongside paid channels.</p>
+                    <ul>
+                        <li>Technical SEO Audits</li>
+                        <li>Keyword & Topic Strategy</li>
+                        <li>Content & Blog Pipelines</li>
+                        <li>Digital PR & Link Building</li>
+                    </ul>
+                </div>
+                <div class="service-block">
+                    <h3>Brand & Positioning</h3>
+                    <p>Messaging frameworks, brand identity, and market positioning for launches and rebrands—quiet-luxury aesthetics included.</p>
+                    <ul>
+                        <li>Brand Strategy & Voice</li>
+                        <li>Visual Identity Direction</li>
+                        <li>Launch Campaign Planning</li>
+                        <li>Competitor & Market Research</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engagement Models -->
+    <section class="engagement">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--cream);">Ways to Work Together</h2>
+            <div class="engagement-grid">
+                <div class="engagement-card">
+                    <h3>Project-Based</h3>
+                    <p>Fixed-scope engagements for campaigns, films, or website builds. Clear deliverables, defined timeline, no surprises.</p>
+                    <div class="price">From $1,500 <span>/ project</span></div>
+                </div>
+                <div class="engagement-card">
+                    <h3>Monthly Retainer</h3>
+                    <p>Ongoing management of paid media, creative, and reporting with a dedicated growth partner on your side.</p>
+                    <div class="price">From $2,000 <span>/ month</span></div>
+                </div>
+                <div class="engagement-card">
+                    <h3>Fractional CMO</h3>
+                    <p>Executive-level strategy, team leadership, and quarterly planning for brands scaling past the founder stage.</p>
+                    <div class="price">Custom <span>/ quarter</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Ready to Grow?</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem; opacity: 0.9;">Tell me where your business is today, and I'll map the fastest path to where it needs to be.</p>
+            <a href="contact.html" class="cta-button">Book a Free Strategy Call</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Kaif Ashraf</div>
+                <p>Digital Marketing & Creative Studio</p>
+                <div class="footer-links">
+                    <a href="ai-marketer.html">AI Marketing</a>
+                    <a href="filmmaker.html">Filmmaking</a>
+                    <a href="portfolio-showcase.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p class="copyright">© 2024 Kaif Ashraf. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

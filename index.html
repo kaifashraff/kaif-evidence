@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaif Ashraf Shekh — Evidence Portfolio</title>
+<meta name="description" content="Verified work samples: AI-generated documentaries, Rust agent-verification system, brand direction, client deliverables and landing pages.">
+<style>
+:root{--bg:#0a0a0c;--surface:#111114;--elev:#17171b;--line:#24242b;--text:#e9e9ec;--muted:#8e8e99;--faint:#5a5a66;--gold:#c9a96e;--ok:#5ee6a8}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.mono{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace}
+header{padding:80px 0 60px;border-bottom:1px solid var(--line)}
+.kicker{font-family:ui-monospace,monospace;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+h1{font-size:clamp(34px,6vw,58px);font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.sub{margin-top:14px;font-size:clamp(15px,2vw,18px);color:var(--muted);max-width:660px}
+.facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+.fact b{display:block;font-size:24px;color:var(--gold);font-family:ui-monospace,monospace}
+.fact span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+nav{position:sticky;top:0;z-index:50;background:rgba(10,10,12,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:22px;height:56px;align-items:center;overflow-x:auto}
+nav a{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .2s}
+nav a:hover{color:var(--gold)}
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+.sechead{margin-bottom:32px}
+.sechead .idx{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.26em;color:var(--gold);text-transform:uppercase}
+.sechead h2{font-size:clamp(22px,3.4vw,32px);margin-top:8px;font-weight:650}
+.sechead p{color:var(--muted);font-size:14px;margin-top:8px;max-width:620px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px}
+.card{background:var(--elev);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+.card:hover{border-color:rgba(201,169,110,.45);transform:translateY(-3px)}
+.media{background:#000;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.media video,.media img{width:100%;height:100%;object-fit:contain;display:block}
+.body{padding:18px;flex:1;display:flex;flex-direction:column;gap:8px}
+.card h3{font-size:16px;font-weight:600;line-height:1.35}
+.card p{font-size:13px;color:var(--muted);flex:1}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tags span{font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);padding:2px 7px;border-radius:3px}
+.meta{font-family:ui-monospace,monospace;font-size:10px;color:var(--faint)}
+.doc .doctype{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:4px}
+.btn{display:inline-block;margin-top:10px;padding:9px 18px;border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-family:ui-monospace,monospace;border-radius:3px;transition:all .2s;align-self:flex-start}
+.btn:hover{background:var(--gold);color:#0a0a0c}
+.pages{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.pagecard{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;background:var(--elev);border:1px solid var(--line);border-radius:5px;text-decoration:none;color:var(--text);transition:all .2s}
+.pagecard:hover{border-color:rgba(201,169,110,.5)}
+.pagecard span{font-size:14px}
+.pagecard em{font-family:ui-monospace,monospace;font-size:11px;color:var(--gold);font-style:normal}
+.note{margin-top:26px;padding:18px 20px;background:var(--surface);border-left:2px solid var(--gold);border-radius:3px;font-size:13px;color:var(--muted)}
+.note b{color:var(--text)}
+footer{padding:44px 0;color:var(--faint);font-size:12px;font-family:ui-monospace,monospace}
+footer a{color:var(--gold);text-decoration:none}
+@media(max-width:640px){.grid{grid-template-columns:1fr}header{padding:52px 0 40px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">Evidence Portfolio</div>
+    <h1>Kaif Ashraf Shekh</h1>
+    <p class="sub">AI systems builder and creative producer. This page is a working archive — every file below exists on disk and is playable or openable right here. No stock assets, no mock-ups.</p>
+    <div class="facts">
+      <div class="fact"><b>13</b><span>Proof artifacts</span></div>
+      <div class="fact"><b>4</b><span>Rendered films</span></div>
+      <div class="fact"><b>6</b><span>Landing pages</span></div>
+      <div class="fact"><b>2</b><span>Client deliverables</span></div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#video">Video</a>
+    <a href="#systems">AI Systems</a>
+    <a href="#creative">Creative</a>
+    <a href="#docs">Documents</a>
+    <a href="#pages">Landing Pages</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section id="video">
+  <div class="wrap">
+    <div class="sechead">
+      <div class="idx">01 / Video Production</div>
+      <h2>AI-generated films, finished</h2>
+      <p>Research → script → image/video generation → TTS narration → ffmpeg edit. These are the rendered outputs, not previews.</p>
+    </div>
+    <div class="grid">
+    <article class="card">
+      <div class="media">
+        <video controls preload="metadata" playsinline>
+          <source src="assets/video/bigbang-10min.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="body">
+        <h3>Big Bang — 10-minute documentary</h3>
+        <p>132 AI-generated clips, narration and edit assembled into a finished documentary. Research → script → image/video generation → TTS → ffmpeg.</p>
+        <div class="tags"><span>AI video</span><span>documentary</span><span>ffmpeg</span><span>pipeline</span></div>
+        <div class="meta">17.5 MB</div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="media">
+        <video controls preload="metadata" playsinline>
+          <source src="assets/video/rsi-documentary.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="body">
+        <h3>RSI — Recursive Self-Improvement documentary</h3>
+        <p>24 synced scenes, 3 narration mixes, scripted and produced end to end.</p>
+        <div class="tags"><span>AI video</span><span>documentary</span><span>research</span></div>
+        <div class="meta">12.6 MB</div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="media">
+        <video controls preload="metadata" playsinline>
+          <source src="assets/video/cjp-reel.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="body">
+        <h3>CJP — short-form reel</h3>
+        <p>18 themed AI clips, concat edit. Short-form social cut.</p>
+        <div class="tags"><span>short-form</span><span>reel</span><span>AI video</span></div>
+        <div class="meta">1.3 MB</div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="media">
+        <video controls preload="metadata" playsinline>
+          <source src="assets/video/ai-filmmaking-sample.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="body">
+        <h3>AI filmmaking sample — narrated</h3>
+        <p>End-to-end sample: generated visuals + voice narration + edit.</p>
+        <div class="tags"><span>AI video</span><span>narration</span></div>
+        <div class="meta">3.0 MB</div>
+      </div>
+    </article></div>
+  </div>
+</section>
+
+<section id="systems">
+  <div class="wrap">
+    <div class="sechead">
+      <div class="idx">02 / AI Systems</div>
+      <h2>The engineering underneath</h2>
+      <p>Systems where the agent has to prove its work, not just claim it.</p>
+    </div>
+    <div class="grid">
+    <article class="card">
+      <div class="media"><img src="assets/image/marketing-os-desktop.png" alt="marketing-os — Rust verification gate" loading="lazy"></div>
+      <div class="body">
+        <h3>marketing-os — Rust verification gate</h3>
+        <p>A Rust business OS where an AI agent cannot mark work &#x27;Done&#x27; unless deterministic evidence checks pass. 23 Rust source files, release binary, self-tests.</p>
+        <div class="tags"><span>Rust</span><span>AI systems</span><span>engineering</span></div>
+      </div>
+    </article></div>
+    <div class="note">
+      <b>marketing-os</b> — a Rust business OS: an AI agent cannot mark a task "Done" unless deterministic evidence checks pass.
+      23 Rust source files, release binary and self-tests on disk. This is the strongest single engineering artifact in the archive.
+    </div>
+  </div>
+</section>
+
+<section id="creative">
+  <div class="wrap">
+    <div class="sechead">
+      <div class="idx">03 / Creative Direction</div>
+      <h2>Brand and visual work</h2>
+      <p>Brand systems, product visuals and generated key art.</p>
+    </div>
+    <div class="grid">
+    <article class="card">
+      <div class="media"><img src="assets/image/rsi-key-visual.jpg" alt="RSI — AI character key visual" loading="lazy"></div>
+      <div class="body">
+        <h3>RSI — AI character key visual</h3>
+        <p>Generated character design used in the documentary.</p>
+        <div class="tags"><span>AI image</span><span>character design</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="media"><img src="assets/image/ai-filmmaking-frame.png" alt="AI filmmaking — generated frame" loading="lazy"></div>
+      <div class="body">
+        <h3>AI filmmaking — generated frame</h3>
+        <p>A frame from the AI filmmaking pipeline.</p>
+        <div class="tags"><span>AI image</span><span>pipeline</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="media"><img src="assets/image/laqab-collage.jpg" alt="LAQAB — brand portfolio collage" loading="lazy"></div>
+      <div class="body">
+        <h3>LAQAB — brand portfolio collage</h3>
+        <p>Brand and creative direction for a hand-embroidery manufacturer: dark-moody system, product collage.</p>
+        <div class="tags"><span>brand</span><span>creative direction</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="media"><img src="assets/image/laqab-product.jpg" alt="LAQAB — product visual" loading="lazy"></div>
+      <div class="body">
+        <h3>LAQAB — product visual</h3>
+        <p>Product photography direction and retouch.</p>
+        <div class="tags"><span>product</span><span>retouch</span></div>
+      </div>
+    </article></div>
+  </div>
+</section>
+
+<section id="docs">
+  <div class="wrap">
+    <div class="sechead">
+      <div class="idx">04 / Documents</div>
+      <h2>Client deliverables and production scripts</h2>
+      <p>Real client-facing documents and the scripts behind the films.</p>
+    </div>
+    <div class="grid">
+    <article class="card doc">
+      <div class="body">
+        <div class="doctype">PDF</div>
+        <h3>VM Design Studio — Growth Partner proposal</h3>
+        <p>7-page client-facing proposal. Real client deliverable.</p>
+        <div class="tags"><span>client work</span><span>proposal</span></div>
+        <a class="btn" href="assets/doc/vm-growth-partner-proposal.pdf" target="_blank" rel="noopener">Open →</a>
+      </div>
+    </article>
+    <article class="card doc">
+      <div class="body">
+        <div class="doctype">PDF</div>
+        <h3>VM Design Studio — Research deck</h3>
+        <p>11-slide research and positioning deck.</p>
+        <div class="tags"><span>client work</span><span>research</span></div>
+        <a class="btn" href="assets/doc/vm-research-presentation.pdf" target="_blank" rel="noopener">Open →</a>
+      </div>
+    </article>
+    <article class="card doc">
+      <div class="body">
+        <div class="doctype">MD</div>
+        <h3>RSI — production script</h3>
+        <p>30 KB documentary script.</p>
+        <div class="tags"><span>writing</span><span>script</span></div>
+        <a class="btn" href="assets/doc/rsi-script.md" target="_blank" rel="noopener">Open →</a>
+      </div>
+    </article>
+    <article class="card doc">
+      <div class="body">
+        <div class="doctype">MD</div>
+        <h3>NEET 2026 — Hinglish voiceover script</h3>
+        <p>Research brief and voiceover script.</p>
+        <div class="tags"><span>writing</span><span>voiceover</span></div>
+        <a class="btn" href="assets/doc/neet-voiceover.md" target="_blank" rel="noopener">Open →</a>
+      </div>
+    </article></div>
+  </div>
+</section>
+
+<section id="pages">
+  <div class="wrap">
+    <div class="sechead">
+      <div class="idx">05 / Landing Pages</div>
+      <h2>Hand-built pages</h2>
+      <p>Self-contained single-file HTML. Open any of them — they work offline.</p>
+    </div>
+    <div class="pages"><a class="pagecard" href="assets/page/agency-services.html" target="_blank" rel="noopener"><span>Agency Services</span><em>open →</em></a><a class="pagecard" href="assets/page/ai-marketer.html" target="_blank" rel="noopener"><span>Ai Marketer</span><em>open →</em></a><a class="pagecard" href="assets/page/contact.html" target="_blank" rel="noopener"><span>Contact</span><em>open →</em></a><a class="pagecard" href="assets/page/filmmaker.html" target="_blank" rel="noopener"><span>Filmmaker</span><em>open →</em></a><a class="pagecard" href="assets/page/laqab-services.html" target="_blank" rel="noopener"><span>Laqab Services</span><em>open →</em></a><a class="pagecard" href="assets/page/portfolio-showcase.html" target="_blank" rel="noopener"><span>Portfolio Showcase</span><em>open →</em></a></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sechead">
+      <div class="idx">06 / Contact</div>
+      <h2>Let's talk</h2>
+    </div>
+    <p style="color:var(--muted);font-size:15px;max-width:560px">
+      Email <a href="mailto:kaifworkk@gmail.com" style="color:var(--gold)">kaifworkk@gmail.com</a> ·
+      Phone +91 99873 14177 ·
+      <a href="https://kaifashraff.github.io/kaif-ai/" target="_blank" rel="noopener" style="color:var(--gold)">Live portfolio</a> ·
+      <a href="https://github.com/kaifashraff" target="_blank" rel="noopener" style="color:var(--gold)">GitHub</a>
+    </p>
+    <div class="note">
+      <b>Honesty note.</b> Everything on this page is a file that exists and was verified. Marketing systems are built and documented;
+      no claim of live ad-spend results is made anywhere. See the career-intelligence documents for what is deliberately not claimed.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Kaif Ashraf Shekh · Evidence Portfolio · Ahmedabad, India</div>
+</footer>
+
+</body>
+</html>

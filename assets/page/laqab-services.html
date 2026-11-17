@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAQAB | Premium Indian Wedding Embroidery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0b1220;
+            --gold: #c9a96e;
+            --cream: #faf8f5;
+            --wine: #722f37;
+            --light-navy: #1a2238;
+            --dark-gold: #b08c3e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--cream);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--navy);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(11, 18, 32, 0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        
+        .logo span {
+            color: var(--cream);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--gold);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--gold);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(160deg, var(--navy) 0%, var(--light-navy) 60%, #2a1420 100%);
+            color: var(--cream);
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::after {
+            content: 'LAQAB';
+            position: absolute;
+            right: -2%;
+            bottom: -8%;
+            font-family: 'Crimson Text', serif;
+            font-size: 14rem;
+            font-weight: 700;
+            color: rgba(201, 169, 110, 0.06);
+            letter-spacing: 4px;
+            line-height: 1;
+        }
+        
+        .hero-content {
+            max-width: 700px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .eyebrow {
+            font-size: 0.85rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .hero h1 {
+            font-family: 'Crimson Text', serif;
+            font-size: 3.4rem;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h1 span {
+            color: var(--gold);
+            font-style: italic;
+        }
+        
+        .hero p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 580px;
+            margin-bottom: 2.5rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--navy);
+            padding: 1rem 2.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--gold);
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(201, 169, 110, 0.2);
+        }
+        
+        .cta-ghost {
+            display: inline-block;
+            border: 2px solid rgba(201, 169, 110, 0.5);
+            color: var(--cream);
+            padding: 1rem 2.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta-ghost:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-3px);
+        }
+        
+        /* Craft Section */
+        .craft {
+            padding: 6rem 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--navy);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--gold);
+        }
+        
+        .craft-intro {
+            max-width: 720px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            color: #555;
+            font-size: 1.1rem;
+        }
+        
+        .craft-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+        
+        .craft-item {
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background: var(--cream);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .craft-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(11, 18, 32, 0.1);
+            border-color: var(--gold);
+        }
+        
+        .craft-item h3 {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.5rem;
+            color: var(--navy);
+            margin-bottom: 0.8rem;
+        }
+        
+        .craft-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* Collections */
+        .collections {
+            padding: 6rem 0;
+            background-color: var(--navy);
+            color: var(--cream);
+        }
+        
+        .collections .section-title {
+            color: var(--cream);
+        }
+        
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .collection-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(201, 169, 110, 0.15);
+            border-radius: 8px;
+            padding: 2.5rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            position: relative;
+        }
+        
+        .collection-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+        }
+        
+        .collection-card .price {
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-family: 'Crimson Text', serif;
+            font-size: 1.1rem;
+            color: var(--gold);
+        }
+        
+        .collection-card h3 {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.6rem;
+            color: var(--cream);
+            margin-bottom: 0.8rem;
+            padding-right: 5rem;
+        }
+        
+        .collection-card p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+        }
+        
+        .collection-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .collection-card ul li {
+            padding: 0.35rem 0;
+            font-size: 0.9rem;
+            opacity: 0.75;
+            position: relative;
+            padding-left: 1.4rem;
+        }
+        
+        .collection-card ul li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.8rem;
+        }
+        
+        /* Process */
+        .process {
+            padding: 6rem 0;
+            background-color: white;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            counter-reset: step;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 2rem 1rem;
+            position: relative;
+        }
+        
+        .step .num {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.8rem;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+        
+        .step h3 {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.3rem;
+            color: var(--navy);
+            margin-bottom: 0.6rem;
+        }
+        
+        .step p {
+            color: #666;
+            font-size: 0.92rem;
+        }
+        
+        /* Testimonial */
+        .testimonial {
+            background: linear-gradient(135deg, var(--wine) 0%, #5c252c 100%);
+            color: var(--cream);
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .testimonial blockquote {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.7rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.5;
+        }
+        
+        .testimonial cite {
+            font-style: normal;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            color: var(--gold);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--navy);
+            color: var(--cream);
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-family: 'Crimson Text', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-tagline {
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .footer-links a {
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            
+            .hero::after {
+                font-size: 8rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .collection-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding: 4rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="ai-marketer.html" class="logo">Kaif<span>Ashraf</span></a>
+            <nav>
+                <ul>
+                    <li><a href="ai-marketer.html">AI Marketer</a></li>
+                    <li><a href="filmmaker.html">Filmmaker</a></li>
+                    <li><a href="agency-services.html">Agency</a></li>
+                    <li><a href="laqab-services.html">LAQAB</a></li>
+                    <li><a href="portfolio-showcase.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="eyebrow">LAQAB · Lucknow Artisans · Quality zAri Boutique</div>
+                <h1>Heirloom <span>Embroidery</span> for Life's Grandest Days</h1>
+                <p>Handcrafted zari, zardozi and silai work from Lucknow's finest karigar cluster — bespoke sherwanis, bridal suits and Indo-Western couture for weddings that deserve to be remembered.</p>
+                <a href="https://wa.me/919987314177?text=Namaste%20LAQAB%20team!%20Main%20apne%20wedding%20ke%20liye%20enquiry%20karni%20thi." class="cta-button" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+                <a href="https://kaifashraff.github.io/laqab/" class="cta-ghost" target="_blank" rel="noopener">Visit LAQAB Website</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Craft Section -->
+    <section class="craft">
+        <div class="container">
+            <h2 class="section-title">The Craft</h2>
+            <p class="craft-intro">Every LAQAB piece begins in a 300-year-old tradition — hand-guided needles, real metal threads, and the unhurried patience of master artisans who have embroidered for generations.</p>
+            <div class="craft-grid">
+                <div class="craft-item">
+                    <h3>Zari & Zardozi</h3>
+                    <p>Genuine gold and silver-plated threads, hand-coiled and couched onto silk and velvet. Each motif takes days — never machine-mimicked.</p>
+                </div>
+                <div class="craft-item">
+                    <h3>Handwork & Silai</h3>
+                    <p>Traditional hand-stitching and finishing techniques that keep every seam structural, every drape intentional, every garment heirloom-grade.</p>
+                </div>
+                <div class="craft-item">
+                    <h3>Dyework & Textiles</h3>
+                    <p>Seasoned dyeing and fabric sourcing — from Banarasi silks to organza and raw silk — curated to your trousseau's palette.</p>
+                </div>
+                <div class="craft-item">
+                    <h3>Bespoke Fitting</h3>
+                    <p>Measurements guided by our fit process — in person or via guided video consultation for clients across India and the Gulf.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections -->
+    <section class="collections">
+        <div class="container">
+            <h2 class="section-title">The Collections</h2>
+            <div class="collection-grid">
+                <div class="collection-card">
+                    <div class="price">$500 – $5,000</div>
+                    <h3>Sherwanis</h3>
+                    <p>Statement groom-wear for the baraat — hand-embroidered, structured, and cut to command a room.</p>
+                    <ul>
+                        <li>Bespoke fits & regal silhouettes</li>
+                        <li>Custom motif and monogram work</li>
+                        <li>Complete groom styling support</li>
+                    </ul>
+                </div>
+                <div class="collection-card">
+                    <div class="price">$800 – $3,000</div>
+                    <h3>Bridal Suits & Lehengas</h3>
+                    <p>For the bride and the family — intricate zardozi and resham work on silks that photograph like a dream.</p>
+                    <ul>
+                        <li>Full trousseau design & coordination</li>
+                        <li>Heirloom-quality finishing</li>
+                        <li>Matching family ensembles</li>
+                    </ul>
+                </div>
+                <div class="collection-card">
+                    <div class="price">$600 – $2,500</div>
+                    <h3>Indo-Western Fusion</h3>
+                    <p>Bandhgalas, embroidered blazers and contemporary silhouettes — heritage craft for the modern wardrobe.</p>
+                    <ul>
+                        <li>Sharp tailoring, bold embroidery</li>
+                        <li>Corporate & formal off-season line</li>
+                        <li>Red-carpet & event styling</li>
+                    </ul>
+                </div>
+                <div class="collection-card">
+                    <div class="price">$50 – $500</div>
+                    <h3>Accessories</h3>
+                    <p>Pagris, safas, dupatta borders and brooches — the finishing details that complete the ensemble.</p>
+                    <ul>
+                        <li>Custom-matching border work</li>
+                        <li>Gift-ready packaging</li>
+                        <li>Fast-turnaround options</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process">
+        <div class="container">
+            <h2 class="section-title">The Journey</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <span class="num">01</span>
+                    <h3>Consultation</h3>
+                    <p>Share your event, budget and style on WhatsApp. We'll shortlist designs and fabrics for you.</p>
+                </div>
+                <div class="step">
+                    <span class="num">02</span>
+                    <h3>Design & Quote</h3>
+                    <p>Receive a tailored design proposal, fabric swatches and a clear quote with timeline.</p>
+                </div>
+                <div class="step">
+                    <span class="num">03</span>
+                    <h3>Crafting</h3>
+                    <p>Master karigars begin handwork — with progress updates and photos along the way.</p>
+                </div>
+                <div class="step">
+                    <span class="num">04</span>
+                    <h3>Fit & Delivery</h3>
+                    <p>Quality-checked, perfectly fitted, and delivered to your door — in India or the UAE.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial">
+        <div class="container">
+            <blockquote>"The sherwani arrived a week before the wedding, and the embroidery stopped the baraat. Guests asked who made it — I sent them straight to LAQAB."</blockquote>
+            <cite>— Groom, Ahmedabad · October Wedding Season</cite>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">LAQAB</div>
+                <div class="footer-tagline">Lucknow Artisans · Quality zAri Boutique</div>
+                <p>Premium Indian wedding embroidery — by Kaif Ashraf</p>
+                <div class="footer-links">
+                    <a href="ai-marketer.html">AI Marketing</a>
+                    <a href="filmmaker.html">Filmmaking</a>
+                    <a href="portfolio-showcase.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p class="copyright">© 2024 LAQAB · Kaif Ashraf. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
